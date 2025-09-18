@@ -526,7 +526,6 @@ span#call:target {
 @keyframes highlight-call {
   0% {
     color: #47ed60;
-
     font-weight: bold;
   }
   100% {
@@ -540,6 +539,29 @@ span#call {
   display: inline-block;   /* verhindert Layout-Verschieben */
   min-width: max-content;  /* Nummer bleibt stabil */
 }
+
+/* "Get to know us" hervorheben, wenn per #message angesprungen */
+h3#message:target {
+  animation: highlight-message 10s ease forwards;
+}
+
+@keyframes highlight-message {
+  0% {
+    color: #47ed60;
+    font-weight: bold;
+  }
+  100% {
+    color: #fff;          /* ursprüngliche Farbe wiederherstellen */
+    font-weight: normal;
+  }
+}
+
+
+h3#message {
+  display: inline-block;   /* verhindert Layout-Verschieben */
+  min-width: max-content;  /* Nummer bleibt stabil */
+}
+
 
 /* --------------------------------- */
 .contact-form {

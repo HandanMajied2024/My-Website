@@ -12,15 +12,3 @@ CHANGE COLOR OF SVG:
 sed 's/fill="#000000"/fill="#FFFFFF"/g' logo.svg > logo_white.svg
 
 
-TODO
-1. footer bottom soll kein padding haben
-2. make messageb box functional
-3. make links open a new page
-4. fix footer left and right side
-5. alighn "get in touch" headline
-6. responsitivity footer
-7. impressum, prvacy policy
-8. cookies
-9. make contact form fully functional
-10. make nav background white when past main
-11. reogranize files

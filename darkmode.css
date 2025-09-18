@@ -186,20 +186,21 @@ body.home header {
     padding-bottom: 20%;
     box-sizing: border-box;
 
-    background-image: url("bilder/arabic_ed474a.svg");
+    background-image: url("bilder/arabic_FFFFFF.svg");
     background-repeat: no-repeat;
     background-position: right 5% top 0;  /* position der arabischen Schrift auf dem Bildschirm*/
     /* background-size: clamp(300px, 100vw, 1000px) auto; */
 }
 
 body.home main {
-  background-color: #ffffff;
+  background-color: #242424;
+  color: #dadada;
 }
 
 body.home {
-    background-color: #ffffff;
+    background-color: #242424;
     font-family: "inter", sans-serif;
-    color: #242424;
+    color: #dadada;
     font-size: 1rem;
     font-weight: normal;
     padding: 0;
@@ -215,10 +216,10 @@ body {
   height: 100vh;
   background: 
 
-    radial-gradient(circle at 80% 70%, rgb(92, 77, 167), transparent 40%),
-    radial-gradient(circle at 60% 20%, rgb(255, 201, 100), transparent 40%),
-    radial-gradient(circle at 30% 80%, rgb(0, 255, 191), transparent 40%),
-    radial-gradient(circle at 70% 40%, rgb(255, 0, 132), transparent 40%);
+    radial-gradient(circle at 80% 70%, rgb(122, 95, 255), transparent 40%),
+    radial-gradient(circle at 60% 20%, rgb(255, 238, 0), transparent 40%),
+    radial-gradient(circle at 30% 80%, rgb(1, 179, 255), transparent 40%),
+    radial-gradient(circle at 70% 40%, rgb(255, 0, 225), transparent 40%);
   background-repeat: no-repeat;
   background-size: 300% 300%;
   animation: airbrush 12s linear infinite alternate;
@@ -258,6 +259,9 @@ nav ul{
 nav ul li {
     margin: 0 6px; /* Abstand zwischen den Listenelementen */
 }
+nav ul li a {
+    color: #ffffff;
+}
 
 nav ul li.right {
     margin-left: auto; /* Abstand links */
@@ -276,13 +280,12 @@ body a {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #000000;
+    background-color: #ED474A;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 /* INDEX-------------------------------------------------------------------- */
 
@@ -301,7 +304,7 @@ header p {
 }
 
 body.home main h2 {
-    color: #242424;
+    color: #dadada;
     font-size: clamp(20px,3.5vw,200px);
     font-weight: normal;
     margin-top: 5px;
@@ -328,12 +331,12 @@ body.me header {
 }
 
 body.me main {
-    background-color: #ffffff;
+    background-color: #242424;
 }
 
 /* Navbar erlaubt, dass Elemente rausstehen */
 body.me nav ul {
-    background-color: #ffffff;
+    background-color: #242424;
     overflow: visible;
 }
 
@@ -359,16 +362,16 @@ body.me nav ul li#current_page::after {
 
 /* Text sichtbar */
 body.me nav ul li#current_page a {
-    color: #fff;
+    color: #dadada;
 }
 
 /* HOVER------------------------------------ */
 nav ul li a:hover {
-  color: #242424; /* Text wird blau */
+  color: #ED474A; /* Text wird blau */
 }
 /* Hover für aktiven Link ("me") */
 body.me nav ul li#current_page a:hover {
-  color: #242424; /* überschreibt das Weiß */
+  color: #ffffff; /* überschreibt das Weiß */
 }
 /* ICONS */
 /* Hover → schwarzes Icon */
@@ -376,29 +379,29 @@ nav ul li a:hover img {
   content: url("icons/black/home_icon_black.svg");
 }
 /* Home-Icon */
-nav ul li a img[src*="home_icon_ED474A.svg"]:hover {
+nav ul li a img[src*="home_icon_FFFFFF.svg"]:hover {
   content: url("icons/242424/home_icon_242424.svg");
 }
 
 /* Moon-Icon */
-nav ul li a img[src*="moon_icon_ED474A.svg"]:hover {
-  content: url("icons/242424/moon_icon_242424.svg");
+nav ul li a img[src*="sun_icon_FFFFFF.svg"]:hover {
+  content: url("icons/242424/sun_icon_242424.svg");
 }
 
 /* Call-Icon */
-nav ul li a img[src*="call_icon_ED474A.svg"]:hover {
+nav ul li a img[src*="call_icon_FFFFFF.svg"]:hover {
   content: url("icons/242424/call_icon_242424.svg");
 }
 
-/* Message-Icon */
-nav ul li a img[src*="messsage_icon_ED474A.svg"]:hover {
-  content: url("icons/242424/messsage_icon_242424.svg");
+/* Search-Icon */
+nav ul li a img[src*="globe_icon_FFFFFF.svg"]:hover {
+  content: url("icons/242424/globe_icon_242424.svg");
 }
 
 /* ----------------------------------------- */
 
 body.me {
-    background-color: #ED474A;
+    background-color: #47ed60;
     font-family: "inter", sans-serif;
     color: #242424;
     font-size: 15px;
@@ -411,7 +414,7 @@ body.me {
 
 /* ------------------------------------------------------------------------- */
 
-/* Footer--------------------------------------------------------------------- */
+/* FOOTER------------------------------------------------------------------- */
 
 footer {
     font-family: monospace;
@@ -420,7 +423,6 @@ footer {
     justify-content: center;
     flex-direction: column;
 
-
     padding: 0;
     margin: 0;
 
@@ -428,30 +430,29 @@ footer {
     height: auto;
 
 
-    background-color:#242424;
-    color: #FFFFFF;
+    background-color: #131313;
+    color: #d4d4d4;
     text-align: left;
     box-sizing: border-box;
 }
 
 footer h2 {
-    color: #ffffff;
+
     font-size: clamp(25px,1.5vw,70px);
     font-weight: normal;
     margin: 0;
     padding: 0;
 }
 footer h3 {
-    color: #ffffff;
     font-size: clamp(20px,1vw,50px);
     font-weight: normal;
     margin: 0;
-    padding-left: 4%;
+    padding-left: 8%;
 }
 
 footer a {
   font-family: inter, sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
@@ -514,31 +515,8 @@ ul.socials li a {
 
 
 .social-links a:hover {
-  color: #47ed60;
+  color: #ED474A;
   font-weight: bold;
-}
-
-/* Telefonnummer hervorheben, wenn per #call angesprungen */
-span#call:target {
-  animation: highlight-call 10s ease forwards;
-}
-
-@keyframes highlight-call {
-  0% {
-    color: #47ed60;
-
-    font-weight: bold;
-  }
-  100% {
-    color: #fff;          /* ursprüngliche Farbe wiederherstellen */
-    font-weight: normal;
-  }
-}
-
-
-span#call {
-  display: inline-block;   /* verhindert Layout-Verschieben */
-  min-width: max-content;  /* Nummer bleibt stabil */
 }
 
 /* --------------------------------- */
@@ -560,6 +538,8 @@ span#call {
   font-size: 0.7rem;
   box-sizing: border-box;
   border: 1px solid #ccc;
+  background-color: #242424;
+  color: #ffffff;
 }
 
 /* Eingabefelder kompakt */
@@ -610,14 +590,14 @@ span#call {
   padding: 5px 10px;
   border: none;
   border-radius: 30px;
-  background-color: #ED474A;
-  color: #fff;
+  background-color: #47ed60;
+  color: #242424;
   font-size: 0.85rem;
   cursor: pointer;
 }
 
 .contact-form button:hover {
-  background-color: #47ed60;
+  background-color: #ED474A;
   color: #242424;
   font-weight: bold;
 }
@@ -665,6 +645,5 @@ footer ul.footer_bottom li ul li {
 footer ul.footer_bottom li ul li a {
     color: #919090;
     font-size: small;
-
 }
 /* ------------------------------------------------------------------------- */
