@@ -380,22 +380,22 @@ nav ul li a:hover img {
 }
 /* Home-Icon */
 nav ul li a img[src*="home_icon_FFFFFF.svg"]:hover {
-  content: url("icons/242424/home_icon_242424.svg");
+  content: url("icons/ED474A/home_icon_ED474A.svg");
 }
 
-/* Moon-Icon */
+/* sun-Icon */
 nav ul li a img[src*="sun_icon_FFFFFF.svg"]:hover {
-  content: url("icons/242424/sun_icon_242424.svg");
+  content: url("icons/ED474A/sun_icon_ED474A.svg");
 }
 
 /* Call-Icon */
 nav ul li a img[src*="call_icon_FFFFFF.svg"]:hover {
-  content: url("icons/242424/call_icon_242424.svg");
+  content: url("icons/ED474A/call_icon_ED474A.svg");
 }
 
 /* Search-Icon */
-nav ul li a img[src*="globe_icon_FFFFFF.svg"]:hover {
-  content: url("icons/242424/globe_icon_242424.svg");
+nav ul li a img[src*="message_icon_FFFFFF.svg"]:hover {
+  content: url("icons/ED474A/messsage_icon_ED474A.svg");
 }
 
 /* ----------------------------------------- */

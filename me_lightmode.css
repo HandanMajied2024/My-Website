@@ -163,8 +163,68 @@ html {
 
 }
 
-/* INDEX ------------------------------------------------------------------- */
+/* ME ---------------------------------------------------------------------- */
+/* Background Airbrushes for header */
+body {
+  margin: 0;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 80% 70%, rgb(92, 77, 167), transparent 40%),
+    radial-gradient(circle at 60% 20%, rgb(255, 201, 100), transparent 40%),
+    radial-gradient(circle at 30% 80%, rgb(0, 255, 191), transparent 40%),
+    radial-gradient(circle at 70% 40%, rgb(255, 155, 207), transparent 40%);
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  animation: airbrush 12s linear infinite alternate;
+}
 
+@keyframes airbrush {
+  0% {
+    background-position: 10% 10%, 90% 90%, 50% 20%, 30% 80%, 70% 40%;
+  }
+  50% {
+    background-position: 80% 80%, 20% 30%, 70% 90%, 60% 20%, 40% 70%;
+  }
+  100% {
+    background-position: 10% 10%, 90% 90%, 50% 20%, 30% 80%, 70% 40%;
+  }
+}
+/* --------------------------------- */
+
+body.me {
+    background-color: #ED474A;
+    font-family: "inter", sans-serif;
+    color: #242424;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+body header {
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 20%;
+    box-sizing: border-box;
+
+    background-image: url("bilder/arabic_FFFFFF.svg");
+    background-repeat: no-repeat;
+    background-position: right 5% top 0;  /* nicht ganz am Rand */
+}
+
+body main {
+    background-color: #ffffff;
+}
+
+/* Aktiver Button */
+body nav ul li#current_page {
+    position: relative;
+    padding: 5px 20px;
+    z-index: 2;
+}
+
+/* INDEX-------------------------------------------------------------------- */
 body.home {
   margin: 0;
   height: 100vh;
@@ -328,13 +388,12 @@ body.me header {
 }
 
 body.me main {
-    background-color: #ffffff;
+    background-color: #ED474A;
 }
 
-/* Navbar erlaubt, dass Elemente rausstehen */
 body.me nav ul {
-    background-color: #ffffff;
-    overflow: visible;
+    background-color: #ED474A;
+
 }
 
 /* Aktiver Button */

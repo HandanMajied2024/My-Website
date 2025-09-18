@@ -164,8 +164,8 @@ html {
 }
 
 /* INDEX ------------------------------------------------------------------- */
-
-body.home {
+/* Background Airbrushes for header */
+body {
   margin: 0;
   height: 100vh;
   background: 
@@ -174,51 +174,6 @@ body.home {
     radial-gradient(circle at 60% 20%, rgba(255,200,100,0.8), transparent 40%),
     radial-gradient(circle at 30% 80%, rgba(0,200,150,0.7), transparent 40%),
     radial-gradient(circle at 70% 40%, rgba(255,100,180,0.7), transparent 40%);
-  background-repeat: no-repeat;
-  background-size: 300% 300%;
-  animation: airbrush 12s linear infinite alternate;
-}
-
-body.home header {
-    padding-top: 15%;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-bottom: 20%;
-    box-sizing: border-box;
-
-    background-image: url("bilder/arabic_ed474a.svg");
-    background-repeat: no-repeat;
-    background-position: right 5% top 0;  /* position der arabischen Schrift auf dem Bildschirm*/
-    /* background-size: clamp(300px, 100vw, 1000px) auto; */
-}
-
-body.home main {
-  background-color: #ffffff;
-}
-
-body.home {
-    background-color: #ffffff;
-    font-family: "inter", sans-serif;
-    color: #242424;
-    font-size: 1rem;
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-
-    /* cursor: url('cursor-ed474a.svg') 16 16, auto; */
-}
-
-/* ALL PAGES --------------------------------------------------------------- */
-
-body {
-  margin: 0;
-  height: 100vh;
-  background: 
-
-    radial-gradient(circle at 80% 70%, rgb(92, 77, 167), transparent 40%),
-    radial-gradient(circle at 60% 20%, rgb(255, 201, 100), transparent 40%),
-    radial-gradient(circle at 30% 80%, rgb(0, 255, 191), transparent 40%),
-    radial-gradient(circle at 70% 40%, rgb(255, 0, 132), transparent 40%);
   background-repeat: no-repeat;
   background-size: 300% 300%;
   animation: airbrush 12s linear infinite alternate;
@@ -234,6 +189,36 @@ body {
   100% {
     background-position: 10% 10%, 90% 90%, 50% 20%, 30% 80%, 70% 40%;
   }
+}
+
+body header {
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 20%;
+    box-sizing: border-box;
+
+    background-image: url("bilder/arabic_ed474a.svg");
+    background-repeat: no-repeat;
+    background-position: right 5% top 0;  /* position der arabischen Schrift auf dem Bildschirm*/
+    /* background-size: clamp(300px, 100vw, 1000px) auto; */
+}
+
+body main {
+  background-color: #ffffff;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "inter", sans-serif;
+    color: #242424;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+
+    /* TODO */
+    /* cursor: url('cursor-ed474a.svg') 16 16, auto; */
 }
 /* Navbar ------------------------------------------------------------------ */
 
@@ -300,7 +285,7 @@ header p {
     margin-top: -10px
 }
 
-body.home main h2 {
+body main h2 {
     color: #242424;
     font-size: clamp(20px,3.5vw,200px);
     font-weight: normal;
@@ -321,8 +306,9 @@ body.me header {
     padding-right: 15%;
     padding-bottom: 20%;
     box-sizing: border-box;
+    color: #FFFFFF;
 
-    background-image: url("bilder/arabic_white.svg");
+    background-image: url("bilder/arabic_FFFFFF.svg");
     background-repeat: no-repeat;
     background-position: right 5% top 0;  /* nicht ganz am Rand */
 }
@@ -361,6 +347,46 @@ body.me nav ul li#current_page::after {
 body.me nav ul li#current_page a {
     color: #fff;
 }
+
+
+/* Vier-Spalten-Layout für Sprachen */
+.languages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.languages dt {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+/* CODE -------------------------------------------------------------------- */
+
+/* Skill-Rating mit 5 Kreisen */
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* alle 5 Kreise */
+.rating::before {
+  content: "● ● ● ● ●";
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #ccc; /* Standard: grau */
+}
+
+/* gefüllte Kreise pink färben */
+.rating[data-level="1"]::before { content: "● ○ ○ ○ ○"; color: #ED474A; }
+.rating[data-level="2"]::before { content: "● ● ○ ○ ○"; color: #ED474A; }
+.rating[data-level="3"]::before { content: "● ● ● ○ ○"; color: #ED474A; }
+.rating[data-level="4"]::before { content: "● ● ● ● ○"; color: #ED474A; }
+.rating[data-level="5"]::before { content: "● ● ● ● ●"; color: #ED474A; }
+
+
 
 /* HOVER------------------------------------ */
 nav ul li a:hover {
