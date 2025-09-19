@@ -198,7 +198,7 @@ body header {
     padding-bottom: 20%;
     box-sizing: border-box;
 
-    background-image: url("bilder/arabic_ed474a.svg");
+    background-image: url("pictures/arabic_ed474a.svg");
     background-repeat: no-repeat;
     background-position: right 5% top 0;  /* position der arabischen Schrift auf dem Bildschirm*/
     /* background-size: clamp(300px, 100vw, 1000px) auto; */
@@ -308,7 +308,7 @@ body.me header {
     box-sizing: border-box;
     color: #FFFFFF;
 
-    background-image: url("bilder/arabic_FFFFFF.svg");
+    background-image: url("pictures/arabic_FFFFFF.svg");
     background-repeat: no-repeat;
     background-position: right 5% top 0;  /* nicht ganz am Rand */
 }
