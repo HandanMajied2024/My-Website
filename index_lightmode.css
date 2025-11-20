@@ -1,6 +1,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* Box-Sizing für alle Elemente, sorgt dafür, dass padding und border nicht die Breite beeinflussen */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
 /* FONTS-------------------------------------------------------------------- */
 
 @font-face {
@@ -33,134 +45,101 @@ html {
 @media (prefers-color-scheme: dark) {
   /* TODO */
 }
-/* SCREENSIZE--------------------------------------------------------------- */
+/* RESPONSITIVITY----------------------------------------------------------- */
 
-/* Ab 400px (größere Smartphones) */
-@media (min-width: 400px) {
+/* DESKTOP-FIRST BASIS (Ab 1200px → deine gewünschte Desktop-Ansicht) */
+
+body header {
+  background-size: 60%;
+}
+
+body header h1 {
+  font-size: 80px;
+  letter-spacing: -3px;
+}
+
+body header p {
+  font-size: 30px;
+  letter-spacing: -2px;
+  margin-top: -10px;
+}
+
+nav ul {
+  backdrop-filter: none;
+}
+
+
+
+/* bis 1200px – Laptops / kleinere Desktops */
+@media (max-width: 1200px) {
   body header {
-    background-size: 90% auto;
+    background-size: 65%;
   }
 
   body header h1 {
-    font-size: 60px;
-    letter-spacing: -2px;
+    font-size: 72px;
   }
 
   body header p {
-    font-size: 18px;
-    letter-spacing: -1px;
-    margin-top: 0px;
-  }
-  nav ul {
-    backdrop-filter: blur(6px); /* Glass-Effekt */
+    font-size: 26px;
+    margin-top: -6px;
   }
 }
 
-/* Ab 460px (größere Smartphones) */
-@media (min-width: 460px) {
+
+
+/* bis 992px – Tablets (quer/hoch)*/
+@media (max-width: 992px) {
   body header {
-    background-size: 80% auto;
+    background-size: 70%;
   }
 
   body header h1 {
-    font-size: 60px;
-    letter-spacing: -2px;
-  }
-
-  body header p {
-    font-size: 18px;
-    letter-spacing: -1px;
-    margin-top: 0px;
-  }
-}
-
-/* Ab 576px (kleine Tablets / Smartphones quer) */
-@media (min-width: 576px) {
-  body header {
-    background-size: 65% auto;
-  }
-
-  body header h1 {
-    font-size: 65px;
-    letter-spacing: -2px;
-  }
-
-  body header p {
-    font-size: 20px;
-    margin-top: -2px;
-  }
-}
-
-/* Ab 768px (Tablets) */
-@media (min-width: 768px) {
-  body header {
-    background-size: 60% auto;
-  }
-
-  body header h1 {
-    font-size: 70px;
-    letter-spacing: -2px;
+    font-size: 64px;
   }
 
   body header p {
     font-size: 22px;
     margin-top: -4px;
   }
-}
 
-/* Ab 992px (kleine Laptops) */
-@media (min-width: 992px) {
-  body header {
-    background-size: 60% auto;
-  }
-
-  body header h1 {
-    font-size: 75px;
-    letter-spacing: -3px;
-  }
-
-  body header p {
-    font-size: 26px;
-    margin-top: -6px;
-  }
-}
-
-@media (min-width: 1080px) {
-  body header {
-    background-size: 60% auto;
-  }
-
-  body header h1 {
-    font-size: 75px;
-    letter-spacing: -3px;
-  }
-
-  body header p {
-    font-size: 26px;
-    margin-top: -6px;
-  }
   nav ul {
-    backdrop-filter: none; /* Glass-Effekt aus */
+    backdrop-filter: blur(6px); /* auf Tablets Sinnvoll */
   }
 }
 
-/* Ab 1200px (große Desktops / MacBooks) */
-@media (min-width: 1200px) {
+
+
+/* bis 576px – Smartphones */
+@media (max-width: 576px) {
   body header {
-    background-size: 60%; /* "reinzoomen" für große Displays */
+    background-size: 90%;
   }
 
   body header h1 {
-    font-size: 80px;
-    letter-spacing: -3px;
+    font-size: 50px;
   }
 
   body header p {
-    font-size: 30px;
-    letter-spacing: -2px;
-    margin-top: -10px;
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+/* bis 360px – sehr kleine Smartphones / schmale Geräte */
+@media (max-width: 360px) {
+  body header {
+    background-size: 100%;
   }
 
+  body header h1 {
+    font-size: 42px;
+  }
+
+  body header p {
+    font-size: 16px;
+    margin-top: 2px;
+  }
 }
 
 /* INDEX ------------------------------------------------------------------- */
@@ -238,6 +217,12 @@ nav ul{
     padding-right: 30px; 
     padding-left: 30px;
     box-sizing: border-box; /* damit padding nicht die Breite beeinflusst */
+}
+
+/* Größe der Listenelemente */
+nav ul li a img {
+    width: 24px;
+    height: auto;
 }
 
 nav ul li {
@@ -398,12 +383,9 @@ body.me nav ul li#current_page a:hover {
 }
 /* ICONS */
 /* Hover → schwarzes Icon */
-nav ul li a:hover img {
-  content: url("icons/black/home_icon_black.svg");
-}
 /* Home-Icon */
-nav ul li a img[src*="home_icon_ED474A.svg"]:hover {
-  content: url("icons/242424/home_icon_242424.svg");
+nav ul li a img[src*="logo_ED474A.svg"]:hover {
+  content: url("icons/242424/logo_242424.svg");
 }
 
 /* Moon-Icon */
