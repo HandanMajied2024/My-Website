@@ -108,12 +108,10 @@ nav ul {
   }
 }
 
-
-
 /* bis 576px – Smartphones */
 @media (max-width: 576px) {
   body header {
-    background-size: 90%;
+    background-size: 70%;
   }
 
   body header h1 {
@@ -129,7 +127,7 @@ nav ul {
 /* bis 360px – sehr kleine Smartphones / schmale Geräte */
 @media (max-width: 360px) {
   body header {
-    background-size: 100%;
+    background-size: 110%;
   }
 
   body header h1 {
@@ -419,7 +417,7 @@ body.me {
 
 /* ------------------------------------------------------------------------- */
 
-/* Footer--------------------------------------------------------------------- */
+/* FOOTER--------------------------------------------------------------------- */
 
 footer {
     font-family: monospace;
@@ -482,7 +480,7 @@ ul.footer_content li {
     margin: 0;
     padding: 0;
 }
-/* --------------------------------- */
+/* SOCIALS--------------------------------- */
 ul.socials {
   font-size: 0.9rem;
   list-style: none;
@@ -571,7 +569,7 @@ h3#message {
 }
 
 
-/* --------------------------------- */
+/* CONTACT FORM--------------------------------- */
 .contact-form {
   display: flex;
   flex-wrap: wrap;       /* damit es bei kleinen Bildschirmen umbricht */
@@ -697,4 +695,109 @@ footer ul.footer_bottom li ul li a {
     font-size: small;
 
 }
+/* FOOTER – kleine Screens (z. B. bis 700px)-------------------------------- */
+
+/* FOOTER_CONTENT------------------- */
+/* Kontaktformular-Button: ist im Desktop-Layout UNSICHTBAR */
+.contact-form-toggle {
+  display: none;
+  width: 100%;
+  background-color: #ED474A;
+  color: #fff;
+  font-family: "inter", sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* FOOTER_BOTTOM------------------- */
+.legal_mobile {
+    display: none;
+}
+
+.legal_display_list {
+    display: flex;
+    gap: 10px;
+}
+
+/* FOOTER – kleine Screens (z. B. bis 700px) */
+@media (max-width: 700px) {
+
+  /* FOOTER_CONTENT → wie bei dir */
+  ul.footer_content {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 5%;
+      text-align: left;
+  }
+
+  /* Formular + Desktop-Rechtliches verstecken */
+  .contact-form,
+  .legal_display,
+  .legal_updated_desktop {
+      display: none;
+  }
+
+  /* Button einblenden */
+  .contact-form-toggle {
+      display: block;
+  }
+
+  /* Heading ausblenden */
+  footer h3#message {
+      display: none;
+  }
+
+  /* ===== MOBILE LEGAL BLOCK ===== */
+
+  .legal_mobile {
+      display: flex;             /* sichtbar machen */
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 5%;
+  }
+
+  /* Links nebeneinander */
+  .legal_mobile_links {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      white-space: nowrap;       /* verhindert Umbruch des "|"-Layouts */
+  }
+
+  .legal_mobile_links li a {
+      color: #919090;
+      font-size: small;
+      text-decoration: none;
+  }
+
+  /* Textblöcke untereinander */
+  .legal_mobile_info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: small;
+      color: #919090;
+  }
+
+  /* Footer unten stapeln */
+  .footer_bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 5%;
+  }
+}
+
 /* ------------------------------------------------------------------------- */
