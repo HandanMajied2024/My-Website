@@ -74,7 +74,7 @@ nav ul {
 /* Background Airbrushes for header */
 body {
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
   background: 
 
     radial-gradient(circle at 80% 70%, rgba(189, 176, 255, 0.8), transparent 40%),
@@ -179,6 +179,11 @@ body a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.arrow_up:hover {
+    background-color: #ED474A;
+    cursor: pointer;
 }
 
 
@@ -451,7 +456,7 @@ ul.socials li a {
 
 
 .social-links a:hover {
-  color: #47ed60;
+  color: #ED474A;
   font-weight: bold;
 }
 
@@ -462,7 +467,7 @@ span#call:target {
 
 @keyframes highlight-call {
   0% {
-    color: #47ed60;
+    color: #ED474A;
     font-weight: bold;
   }
   100% {
@@ -484,8 +489,7 @@ h3#message:target {
 
 @keyframes highlight-message {
   0% {
-    color: #47ed60;
-    font-weight: bold;
+    color: #ED474A;
   }
   100% {
     color: #fff;          /* ursprüngliche Farbe wiederherstellen */
@@ -637,12 +641,19 @@ footer ul.footer_bottom li ul li a {
   color: #fff;
   font-family: "inter", sans-serif;
   font-size: 1rem;
+  font-weight: bold;
   padding: 10px 20px;
   border: none;
   border-radius: 30px;
   margin-bottom: 20px;
   cursor: pointer;
   text-align: center;
+}
+
+.contact-form-toggle:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 /* FOOTER_BOTTOM------------------- */
@@ -745,10 +756,10 @@ footer ul.footer_bottom li ul li a {
   }
 }
 
-/* bis 200px – sehr kleine Smartphones / schmale Geräte */
-@media (max-width: 200px) {
+/* bis 250px – sehr kleine Smartphones / schmale Geräte */
+@media (max-width: 250px) {
   body header {
-    background-size: 80%;
+    background-size: 50%;
   }
 
   body header h1 {
