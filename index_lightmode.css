@@ -9,6 +9,9 @@ html, body {
 /* Box-Sizing für alle Elemente, sorgt dafür, dass padding und border nicht die Breite beeinflussen */
 * {
   box-sizing: border-box;
+}
+
+img, video, iframe {
   max-width: 100%;
 }
 
@@ -45,7 +48,6 @@ html, body {
 @media (prefers-color-scheme: dark) {
   /* TODO */
 }
-/* RESPONSITIVITY----------------------------------------------------------- */
 
 /* DESKTOP-FIRST BASIS (Ab 1200px → deine gewünschte Desktop-Ansicht) */
 
@@ -66,78 +68,6 @@ body header p {
 
 nav ul {
   backdrop-filter: none;
-}
-
-
-
-/* bis 1200px – Laptops / kleinere Desktops */
-@media (max-width: 1200px) {
-  body header {
-    background-size: 65%;
-  }
-
-  body header h1 {
-    font-size: 72px;
-  }
-
-  body header p {
-    font-size: 26px;
-    margin-top: -6px;
-  }
-}
-
-
-
-/* bis 992px – Tablets (quer/hoch)*/
-@media (max-width: 992px) {
-  body header {
-    background-size: 70%;
-  }
-
-  body header h1 {
-    font-size: 64px;
-  }
-
-  body header p {
-    font-size: 22px;
-    margin-top: -4px;
-  }
-
-  nav ul {
-    backdrop-filter: blur(6px); /* auf Tablets Sinnvoll */
-  }
-}
-
-/* bis 576px – Smartphones */
-@media (max-width: 576px) {
-  body header {
-    background-size: 70%;
-  }
-
-  body header h1 {
-    font-size: 50px;
-  }
-
-  body header p {
-    font-size: 18px;
-    margin-top: 0;
-  }
-}
-
-/* bis 360px – sehr kleine Smartphones / schmale Geräte */
-@media (max-width: 360px) {
-  body header {
-    background-size: 110%;
-  }
-
-  body header h1 {
-    font-size: 42px;
-  }
-
-  body header p {
-    font-size: 16px;
-    margin-top: 2px;
-  }
 }
 
 /* INDEX ------------------------------------------------------------------- */
@@ -396,9 +326,9 @@ nav ul li a img[src*="call_icon_ED474A.svg"]:hover {
   content: url("icons/242424/call_icon_242424.svg");
 }
 
-/* Message-Icon */
-nav ul li a img[src*="messsage_icon_ED474A.svg"]:hover {
-  content: url("icons/242424/messsage_icon_242424.svg");
+/* Chat-Icon */
+nav ul li a img[src*="chat_icon_ED474A.svg"]:hover {
+  content: url("icons/242424/chat_icon_242424.svg");
 }
 
 /* ----------------------------------------- */
@@ -420,7 +350,7 @@ body.me {
 /* FOOTER--------------------------------------------------------------------- */
 
 footer {
-    font-family: monospace;
+    /* font-family: monospace; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,14 +371,12 @@ footer {
 }
 
 footer h2 {
-    color: #ffffff;
     font-size: clamp(25px,1.5vw,70px);
     font-weight: normal;
     margin: 0;
     padding: 0;
 }
 footer h3 {
-    color: #ffffff;
     font-size: clamp(20px,1vw,50px);
     font-weight: normal;
     margin: 0;
@@ -457,10 +385,13 @@ footer h3 {
 
 footer a {
   font-family: inter, sans-serif;
-  color: #FFFFFF;
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
+}
+
+footer span {
+  font-size: 1rem;
 }
 
 /* --------------------------------- */
@@ -724,6 +655,112 @@ footer ul.footer_bottom li ul li a {
     gap: 10px;
 }
 
+/* RESPONSITIVITY----------------------------------------------------------- */
+
+/* bis 1200px – Laptops / kleinere Desktops */
+@media (max-width: 1200px) {
+  body header {
+    background-size: 65%;
+  }
+
+  body header h1 {
+    font-size: 72px;
+  }
+
+  body header p {
+    font-size: 26px;
+    margin-top: -6px;
+  }
+}
+
+
+
+/* bis 992px – Tablets (quer/hoch)*/
+@media (max-width: 992px) {
+  body header {
+    background-size: 70%;
+  }
+
+  body header h1 {
+    font-size: 64px;
+  }
+
+  body header p {
+    font-size: 22px;
+    margin-top: -4px;
+  }
+
+  nav ul {
+    backdrop-filter: blur(6px); /* auf Tablets Sinnvoll */
+  }
+}
+
+/* bis 576px – Smartphones */
+@media (max-width: 576px) {
+  body header {
+    background-size: 70%;
+  }
+
+  body header h1 {
+    font-size: 50px;
+  }
+
+  body header p {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+/* bis 460px – Smartphones */
+@media (max-width: 460px) {
+  body header {
+    background-size: 110%;
+    background-position: calc(100% + 16vw) 1vw;
+  }
+
+  body header h1 {
+    font-size: 50px;
+  }
+
+  body header p {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+
+/* bis 360px – sehr kleine Smartphones / schmale Geräte */
+@media (max-width: 360px) {
+  body header {
+    background-size: 110%;
+  }
+
+  body header h1 {
+    font-size: 42px;
+  }
+
+  body header p {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+}
+
+/* bis 200px – sehr kleine Smartphones / schmale Geräte */
+@media (max-width: 200px) {
+  body header {
+    background-size: 80%;
+  }
+
+  body header h1 {
+    font-size: 42px;
+  }
+
+  body header p {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+}
+
 /* FOOTER – kleine Screens (z. B. bis 700px) */
 @media (max-width: 700px) {
 
@@ -799,5 +836,5 @@ footer ul.footer_bottom li ul li a {
       padding: 10px 5%;
   }
 }
-
 /* ------------------------------------------------------------------------- */
+
