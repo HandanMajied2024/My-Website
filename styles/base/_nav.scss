@@ -1,0 +1,66 @@
+/* NAVIGATION --------------------------------------------------------------- */
+
+nav ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    backdrop-filter: none;
+}
+
+/* Größe der Listenelemente */
+nav ul li a img {
+    width: 24px;
+    height: auto;
+}
+
+nav ul li {
+    margin: 0 6px;
+}
+
+nav ul li.right {
+    margin-left: auto;
+}
+
+/* Allgemeine Links */
+body a {
+    color: #ED474A;
+    font-family: 'inter', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* NAV Hover */
+nav ul li a:hover {
+  color: #242424;
+}
+
+/* ICON Hovers -------------------------------------------------------------- */
+
+/* Home-Icon */
+nav ul li a img[src*="logo_ED474A.svg"]:hover {
+  content: url("icons/242424/logo_242424.svg");
+}
+
+/* Moon-Icon */
+nav ul li a img[src*="moon_icon_ED474A.svg"]:hover {
+  content: url("icons/242424/moon_icon_242424.svg");
+}
+
+/* Call-Icon */
+nav ul li a img[src*="call_icon_ED474A.svg"]:hover {
+  content: url("icons/242424/call_icon_242424.svg");
+}
+
+/* Chat-Icon */
+nav ul li a img[src*="chat_icon_ED474A.svg"]:hover {
+  content: url("icons/242424/chat_icon_242424.svg");
+}

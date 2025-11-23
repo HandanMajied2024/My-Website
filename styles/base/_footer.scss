@@ -1,0 +1,256 @@
+/* FOOTER--------------------------------------------------------------------- */
+
+footer {
+    /* font-family: monospace; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: auto;
+
+    background-color:#242424;
+    color: #FFFFFF;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+footer h2 {
+    font-size: clamp(25px,1.5vw,70px);
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+footer h3 {
+    font-size: clamp(20px,1vw,50px);
+    font-weight: normal;
+    margin: 0;
+    padding-left: 4%;
+}
+
+footer a {
+  font-family: inter, sans-serif;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+footer span {
+  font-size: 1rem;
+}
+
+/* --------------------------------- */
+ul.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* vertikal zentriert */
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10%;
+}
+
+ul.footer_content li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* SOCIALS--------------------------------- */
+ul.socials {
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+}
+
+ul.socials li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+ul.socials li img {
+  width: 24px;
+  height: auto;
+}
+
+/* Links in Social-Bereich */
+ul.socials li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+}
+
+/* Nur LinkedIn + GitHub nebeneinander */
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a:hover {
+  color: #ED474A;
+  font-weight: bold;
+}
+
+
+/* Footer Bottom ------------------------------------------------------------ */
+ul.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    background-color: #000000;
+    color: #919090;
+
+    height: auto;
+    width: 100%;
+    
+    padding: 0;
+    margin: 0;
+
+    font-size: small;
+}
+
+footer ul.footer_bottom li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+footer ul.footer_bottom li ul {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer ul.footer_bottom li ul li {
+    margin: 0;
+    padding: 0;
+    color: #919090;
+    font-size: small;
+}
+
+footer ul.footer_bottom li ul li a {
+    color: #919090;
+    font-size: small;
+}
+
+
+/* MOBILE FOOTER (bis 700px) ----------------------------------------------- */
+
+/* Kontaktformular-Button: Desktop = versteckt */
+.contact-form-toggle {
+  display: none;
+  width: 100%;
+  background-color: #ED474A;
+  color: #fff;
+  font-family: "inter", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contact-form-toggle:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.legal_mobile {
+    display: none;
+}
+
+.legal_display_list {
+    display: flex;
+    gap: 10px;
+}
+
+/* Footer responsive -------------------------------------------------------- */
+@media (max-width: 700px) {
+
+  ul.footer_content {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 5%;
+      text-align: left;
+  }
+
+  /* Formular + Desktop-Rechtliches verstecken */
+  .contact-form,
+  .legal_display,
+  .legal_updated_desktop {
+      display: none;
+  }
+
+  .contact-form-toggle {
+      display: block;
+  }
+
+  footer h3#message {
+      display: none;
+  }
+
+  /* ===== MOBILE LEGAL BLOCK ===== */
+
+  .legal_mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 5%;
+  }
+
+  .legal_mobile_links {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      white-space: nowrap;
+  }
+
+  .legal_mobile_links li a {
+      color: #919090;
+      font-size: small;
+      text-decoration: none;
+  }
+
+  .legal_mobile_info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: small;
+      color: #919090;
+  }
+
+  .footer_bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 5%;
+  }
+}

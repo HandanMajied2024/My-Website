@@ -1,0 +1,4 @@
+_filename.scss
+
+= Unterstrich bedeutet: Partial → SCSS erzeugt daraus keine einzelne CSS-Datei.
+Alle werden über main.scss zusammengeführt.

@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* Box-Sizing für alle Elemente, sorgt dafür, dass padding und border nicht die Breite beeinflussen */
+* {
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}

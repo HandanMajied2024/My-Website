@@ -1,0 +1,207 @@
+/* Arrow-Up Button -------------------------------------------------------- */
+.arrow_up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow_up:hover {
+    background-color: #ED474A;
+    cursor: pointer;
+}
+
+
+/* Languages Grid --------------------------------------------------------- */
+.languages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.languages dt {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+
+/* Rating Component -------------------------------------------------------- */
+/* Skill-Rating mit 5 Kreisen */
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* alle 5 Kreise */
+.rating::before {
+  content: "● ● ● ● ●";
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #ccc; /* Standard: grau */
+}
+
+/* gefüllte Kreise pink färben */
+.rating[data-level="1"]::before { content: "● ○ ○ ○ ○"; color: #ED474A; }
+.rating[data-level="2"]::before { content: "● ● ○ ○ ○"; color: #ED474A; }
+.rating[data-level="3"]::before { content: "● ● ● ○ ○"; color: #ED474A; }
+.rating[data-level="4"]::before { content: "● ● ● ● ○"; color: #ED474A; }
+.rating[data-level="5"]::before { content: "● ● ● ● ●"; color: #ED474A; }
+
+
+/* Highlight Animations ---------------------------------------------------- */
+/* Telefonnummer hervorheben, wenn per #call angesprungen */
+span#call:target {
+  animation: highlight-call 10s ease forwards;
+}
+
+@keyframes highlight-call {
+  0% {
+    color: #ED474A;
+    font-weight: bold;
+  }
+  100% {
+    color: #fff;
+    font-weight: normal;
+  }
+}
+
+span#call {
+  display: inline-block;
+  min-width: max-content;
+}
+
+/* "Get to know us" hervorheben, wenn per #message angesprungen */
+h3#message:target {
+  animation: highlight-message 10s ease forwards;
+}
+
+@keyframes highlight-message {
+  0% {
+    color: #ED474A;
+  }
+  100% {
+    color: #fff;
+    font-weight: normal;
+  }
+}
+
+h3#message {
+  display: inline-block;
+  min-width: max-content;
+}
+
+
+/* Contact Form ------------------------------------------------------------ */
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-family: "inter", sans-serif;
+  font-size: 0.7rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.contact-form input {
+  height: 28px;
+  line-height: 1.2;
+}
+
+.contact-form textarea {
+  min-height: 80px;
+  max-height: 120px;
+  resize: none;
+}
+
+.contact-form .form-right textarea {
+  flex: 1;
+  min-height: 80px;
+  max-height: 120px;
+}
+
+.contact-form .form-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: fit-content;
+}
+
+.contact-form .form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+}
+
+.contact-form .form-actions {
+  width: 100%;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #ED474A;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+/* Contact Form Toggle (Mobile) -------------------------------------------- */
+.contact-form-toggle {
+  display: none;
+  width: 100%;
+  background-color: #ED474A;
+  color: #fff;
+  font-family: "inter", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contact-form-toggle:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+
+/* Social Links Hover ------------------------------------------------------ */
+.social-links a:hover {
+  color: #ED474A;
+  font-weight: bold;
+}

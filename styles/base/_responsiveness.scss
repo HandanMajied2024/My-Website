@@ -1,0 +1,102 @@
+/* RESPONSITIVITY----------------------------------------------------------- */
+
+/* bis 1200px – Laptops / kleinere Desktops */
+@media (max-width: 1200px) {
+  body header {
+    background-size: 65%;
+  }
+
+  body header h1 {
+    font-size: 72px;
+  }
+
+  body header p {
+    font-size: 26px;
+    margin-top: -6px;
+  }
+}
+
+/* bis 992px – Tablets (quer/hoch) */
+@media (max-width: 992px) {
+  body header {
+    background-size: 70%;
+  }
+
+  body header h1 {
+    font-size: 64px;
+  }
+
+  body header p {
+    font-size: 22px;
+    margin-top: -4px;
+  }
+
+  nav ul {
+    backdrop-filter: blur(6px);
+  }
+}
+
+/* bis 576px – Smartphones */
+@media (max-width: 576px) {
+  body header {
+    background-size: 70%;
+  }
+
+  body header h1 {
+    font-size: 50px;
+  }
+
+  body header p {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+/* bis 460px – sehr kleine Smartphones */
+@media (max-width: 460px) {
+  body header {
+    background-size: 110%;
+    background-position: calc(100% + 16vw) 1vw;
+  }
+
+  body header h1 {
+    font-size: 50px;
+  }
+
+  body header p {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+/* bis 360px – sehr kleine Smartphones */
+@media (max-width: 360px) {
+  body header {
+    background-size: 110%;
+  }
+
+  body header h1 {
+    font-size: 42px;
+  }
+
+  body header p {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+}
+
+/* bis 250px – extrem kleine Geräte */
+@media (max-width: 250px) {
+  body header {
+    background-size: 50%;
+  }
+
+  body header h1 {
+    font-size: 42px;
+  }
+
+  body header p {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+}

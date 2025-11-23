@@ -1,0 +1,80 @@
+/* ============================================================
+   ME PAGE
+   ============================================================ */
+
+body.me {
+  background-color: #ED474A;
+  font-family: "inter", sans-serif;
+  color: #242424;
+}
+
+/* Header ------------------------------------------------------- */
+
+body.me header {
+  color: #FFFFFF;
+  background-image: url("pictures/arabic_FFFFFF.svg");
+}
+
+/* Navbar ------------------------------------------------------- */
+body.me nav ul {
+  background-color: #ffffff;
+  overflow: visible;
+}
+
+body.me nav ul li#current_page {
+  position: relative;
+  padding: 5px 20px;
+  z-index: 2;
+}
+
+body.me nav ul li#current_page::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  height: 30px;
+  background-color: #ED474A;
+  border-radius: 50% / 100%;
+  z-index: -1;
+}
+
+body.me nav ul li#current_page a {
+  color: #fff;
+}
+
+/* Language Grid ------------------------------------------------ */
+
+.languages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.languages dt {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+/* Rating ------------------------------------------------------- */
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.rating::before {
+  content: "● ● ● ● ●";
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #ccc;
+}
+
+.rating[data-level="1"]::before { content: "● ○ ○ ○ ○"; color: #ED474A; }
+.rating[data-level="2"]::before { content: "● ● ○ ○ ○"; color: #ED474A; }
+.rating[data-level="3"]::before { content: "● ● ● ○ ○"; color: #ED474A; }
+.rating[data-level="4"]::before { content: "● ● ● ● ○"; color: #ED474A; }
+.rating[data-level="5"]::before { content: "● ● ● ● ●"; color: #ED474A; }
