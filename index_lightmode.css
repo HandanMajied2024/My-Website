@@ -573,6 +573,7 @@ h3#message {
   padding: 5px 10px;
   border: none;
   border-radius: 30px;
+  font-weight: bold;
   background-color: #ED474A;
   color: #fff;
   font-size: 0.85rem;
@@ -580,8 +581,8 @@ h3#message {
 }
 
 .contact-form button:hover {
-  background-color: #47ed60;
-  color: #242424;
+  background-color: #000000;
+  color: #ffffff;
   font-weight: bold;
 }
 
