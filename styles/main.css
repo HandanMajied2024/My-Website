@@ -90,12 +90,14 @@ main {
    HEADER – Gemeinsames Grundlayout für ALLE Seiten
    (Farben/Hintergründe kommen in die Page- oder Theme-Files)
    ============================================================ */
+/* ============================================================
+   HEADER – shared structure
+============================================================ */
 body header {
-  padding-top: 15%;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-bottom: 20%;
-  box-sizing: border-box;
+  padding: 15% 15% 20% 15%;
+  background-repeat: no-repeat;
+  background-position: right 5% top 0;
+  background-size: 60%;
 }
 
 /* Header Typography ------------------------------------------ */
@@ -107,8 +109,16 @@ header h1 {
 
 header p {
   font-size: clamp(20px, 2vw, 40px);
-  letter-spacing: clamp(-2px, -0.5vw, -7px);
+  letter-spacing: clamp(-2px, -0.6vw, -7px);
   margin-top: -10px;
+}
+
+body main h2 {
+  color: #242424;
+  font-size: clamp(30px, 3.5vw, 200px);
+  font-weight: normal;
+  margin-top: 5px;
+  margin-bottom: -10px;
 }
 
 /* ============================================================
@@ -167,6 +177,29 @@ body a {
 .arrow_up:hover {
   background-color: #ED474A;
   cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 7vw, 37.5rem);
+  letter-spacing: clamp(-3px, -0.9vw, -0.6rem);
+  margin: 0;
+}
+
+header p {
+  font-size: clamp(20px, 2vw, 40px);
+  letter-spacing: clamp(-2px, -0.5vw, -7px);
+  margin-top: -10px;
+}
+
+/* ============================================================
+   BODY BACKGROUND IMAGES FOR NON-HOME PAGES
+   ============================================================ */
+body:not(.home) header {
+  background-image: url("../pictures/arabic_FFFFFF.svg");
 }
 
 /* NAVIGATION --------------------------------------------------------------- */
@@ -693,8 +726,13 @@ h3#message {
   font-weight: bold;
 }
 
-/* RESPONSITIVITY----------------------------------------------------------- */
-/* bis 1200px – Laptops / kleinere Desktops */
+/* ============================================================
+   RESPONSIVENESS – GLOBAL FOR ALL PAGES
+   (Header scaling, typography scaling, nav blur)
+   ============================================================ */
+/* ------------------------------
+   1200px – Laptops / small Desktops
+   ------------------------------ */
 @media (max-width: 1200px) {
   body header {
     background-size: 65%;
@@ -707,7 +745,9 @@ h3#message {
     margin-top: -6px;
   }
 }
-/* bis 992px – Tablets (quer/hoch) */
+/* ------------------------------
+   992px – Tablets (portrait & landscape)
+   ------------------------------ */
 @media (max-width: 992px) {
   body header {
     background-size: 70%;
@@ -724,7 +764,9 @@ h3#message {
             backdrop-filter: blur(6px);
   }
 }
-/* bis 576px – Smartphones */
+/* ------------------------------
+   576px – Smartphones
+   ------------------------------ */
 @media (max-width: 576px) {
   body header {
     background-size: 70%;
@@ -737,7 +779,9 @@ h3#message {
     margin-top: 0;
   }
 }
-/* bis 460px – sehr kleine Smartphones */
+/* ------------------------------
+   460px – very small Smartphones
+   ------------------------------ */
 @media (max-width: 460px) {
   body header {
     background-size: 110%;
@@ -751,7 +795,9 @@ h3#message {
     margin-top: 0;
   }
 }
-/* bis 360px – sehr kleine Smartphones */
+/* ------------------------------
+   360px – super small devices
+   ------------------------------ */
 @media (max-width: 360px) {
   body header {
     background-size: 110%;
@@ -764,7 +810,9 @@ h3#message {
     margin-top: 2px;
   }
 }
-/* bis 250px – extrem kleine Geräte */
+/* ------------------------------
+   250px – extreme small
+   ------------------------------ */
 @media (max-width: 250px) {
   body header {
     background-size: 50%;
@@ -778,21 +826,66 @@ h3#message {
   }
 }
 /* ============================================================
+   FOOTER RESPONSIVENESS – up to 700px
+   ============================================================ */
+@media (max-width: 700px) {
+  ul.footer_content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 5%;
+    text-align: left;
+  }
+  .contact-form,
+  .legal_display,
+  .legal_updated_desktop {
+    display: none;
+  }
+  .contact-form-toggle {
+    display: block;
+  }
+  footer h3#message {
+    display: none;
+  }
+  .legal_mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 5%;
+  }
+  .legal_mobile_links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .legal_mobile_info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: small;
+    color: #919090;
+  }
+  .footer_bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 5%;
+  }
+}
+/* ============================================================
    INDEX – SHARED (für Light & Dark)
    ============================================================ */
 /* Header Layout ------------------------------------------------ */
 body.index header {
   background-repeat: no-repeat;
   background-position: right 5% top 0;
-}
-
-/* Index Typography -------------------------------------------- */
-body.index main h2 {
-  color: #242424;
-  font-size: clamp(20px, 3.5vw, 200px);
-  font-weight: normal;
-  margin-top: 5px;
-  margin-bottom: -10px;
 }
 
 /* Airbrush Animation ------------------------------------------ */
@@ -817,8 +910,9 @@ body.index.light {
   animation: airbrush 12s linear infinite alternate;
 }
 
+/* Hintergrundbild für Index-Header */
 body.index.light header {
-  background-image: url("pictures/arabic_ed474a.svg");
+  background-image: url("../pictures/arabic_ed474a.svg");
 }
 
 /* ============================================================

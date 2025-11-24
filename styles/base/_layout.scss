@@ -50,13 +50,18 @@ main {
    (Farben/Hintergründe kommen in die Page- oder Theme-Files)
    ============================================================ */
 
+/* ============================================================
+   HEADER – shared structure
+============================================================ */
+
 body header {
-  padding-top: 15%;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-bottom: 20%;
-  box-sizing: border-box;
+  padding: 15% 15% 20% 15%;
+  background-repeat: no-repeat;
+  background-position: right 5% top 0;
+  background-size: 60%;
 }
+
+
 
 /* Header Typography ------------------------------------------ */
 header h1 {
@@ -67,8 +72,17 @@ header h1 {
 
 header p {
   font-size: clamp(20px, 2vw, 40px);
-  letter-spacing: clamp(-2px, -0.5vw, -7px);
+  letter-spacing: clamp(-2px, -0.6vw, -7px);
   margin-top: -10px;
+}
+
+
+body main h2 {
+  color: #242424;
+  font-size: clamp(30px, 3.5vw, 200px);
+  font-weight: normal;
+  margin-top: 5px;
+  margin-bottom: -10px;
 }
 
 /* ============================================================
@@ -128,4 +142,28 @@ body a {
 .arrow_up:hover {
   background-color: #ED474A;
   cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 7vw, 37.5rem);
+  letter-spacing: clamp(-3px, -0.9vw, -0.6rem);
+  margin: 0;
+}
+
+header p {
+  font-size: clamp(20px, 2vw, 40px);
+  letter-spacing: clamp(-2px, -0.5vw, -7px);
+  margin-top: -10px;
+}
+
+/* ============================================================
+   BODY BACKGROUND IMAGES FOR NON-HOME PAGES
+   ============================================================ */
+
+body:not(.home) header {
+  background-image: url("../pictures/arabic_FFFFFF.svg");
 }

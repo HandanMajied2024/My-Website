@@ -9,16 +9,6 @@ body.index header {
   background-position: right 5% top 0;
 }
 
-/* Index Typography -------------------------------------------- */
-
-body.index main h2 {
-  color: #242424;
-  font-size: clamp(20px, 3.5vw, 200px);
-  font-weight: normal;
-  margin-top: 5px;
-  margin-bottom: -10px;
-}
-
 /* Airbrush Animation ------------------------------------------ */
 
 @keyframes airbrush {
@@ -32,3 +22,4 @@ body.index main h2 {
     background-position: 10% 10%, 90% 90%, 50% 20%, 30% 80%, 70% 40%;
   }
 }
+
