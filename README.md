@@ -1,12 +1,13 @@
 # Portfolio
 
-Ein persönliches Portfolio mit modularer, klar strukturierter SCSS-Architektur.  
-Alle Seiten basieren auf denselben globalen Layout-, Navigations- und Footer-Strukturen.  
-Seitenspezifisches Verhalten wird sauber über eigene SCSS-Module geregelt.
+A personal portfolio built with a modular, clearly structured SCSS architecture.
+All pages share the same global layout, navigation, and footer structures.
+Page-specific behavior is cleanly organized in dedicated SCSS modules.
 
 ---
 
 ## 📁 Projektstruktur
+```
 
 root/
 │── index.html
@@ -35,6 +36,9 @@ root/
 │
 ├── pictures/
 ├── icons/
+```
+
+---
 
 ## 🧱 SCSS Architektur
 
@@ -49,20 +53,21 @@ Globale Styles, die für **alle Seiten** gelten:
 - Responsiveness (alle globalen Breakpoints)
 
 ### `index/`  
-Alle spezifischen Styles nur für die Startseite:  
+Spezifische Styles nur für die Startseite:
 - Hintergrund-Animation  
-- Header-Farbe  
+- Header-Farbgebung  
 - Startseitenlayout
 
 ### Weitere Seiten (`me/`, `contact_me/`, …)  
-Jeder Bereich besitzt eigene SCSS-Module, um Logik/Design sauber zu trennen.
+Jeder Bereich besitzt eigene SCSS-Module zur klaren Trennung von Struktur und Styling.
 
+---
 
 ## ⚙️ SCSS lokal kompilieren
 
-
+```bash
 sass styles/scss/main.scss styles/main.css --watch
-
+```
 
 ## ✅ To-Dos
 
